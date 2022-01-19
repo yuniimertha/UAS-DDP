@@ -1,0 +1,73 @@
+/**************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+***************************/
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int p,j,a,hasil,hasil3,hasil1,hasil2;
+    
+    cout<<"\tARDAN CALCULATOR"<<endl;
+    cout<<"----------------------------------"<<endl;
+    cout<<"1. Perkalian"<<endl;
+    cout<<"2. Pembagian"<<endl;
+    cout<<"3. Perkurangan"<<endl;
+    cout<<"4. Pertambahan"<<endl;
+    cout<<"----------------------------------"<<endl;
+    cout<<"Masukkan angka   : ";
+    cin>>a;
+    cout<<"Pilih Jenis      : ";
+    cin>>j;
+    cout<<"Masukkan Batas   : ";
+    cin>>p;
+    cout<<"----------------------------------"<<endl;
+    cout<<"Hasil : "<<endl;
+    cout<<endl;
+    if(j == 1){
+       for (int u = 0; u<=p; u++){
+
+            hasil3 = a * u;
+            cout<<u;
+            cout<<" X ";
+            cout<<a;
+            cout<<" = ";
+            cout<<hasil3<<endl;
+
+        }
+    }else if(j == 2){ 
+        for (int u = a; u<=p; u+=a){
+            hasil = u/a;
+            cout<<u;
+            cout<<" : ";
+            cout<<a;
+            cout<<" = ";
+            cout<<hasil<<endl;
+        }
+    }else if(j == 3){ 
+        for (int u = 1; u<=p; u++){
+            hasil1 = u-a;
+            cout<<u;
+            cout<<" - ";
+            cout<<a;
+            cout<<" = ";
+            cout<<hasil1<<endl;
+        }
+    }else if(j == 4){ 
+        for (int u = 1; u<=p; u++){
+            hasil2 = u+a;
+            cout<<u;
+            cout<<" + ";
+            cout<<a;
+            cout<<" = ";
+            cout<<hasil2<<endl;
+        }
+    }
+
+    return 0;
+}
