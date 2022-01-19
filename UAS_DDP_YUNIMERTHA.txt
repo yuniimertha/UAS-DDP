@@ -16,7 +16,7 @@ int main()
     int i=0;
     int pilihan,batas,jenis,angka,hasil,hasil3,hasil1,hasil2;
     
-    cout<<"ARDAN PROGRAM";
+    cout<<"\tARDAN PROGRAM"<<endl;
     cout<<"----------------------------------"<<endl;
     cout<<"1. Kalkulator"<<endl;
     cout<<"2. Puisi"<<endl;
