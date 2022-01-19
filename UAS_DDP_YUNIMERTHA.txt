@@ -1,73 +1,104 @@
-/**************************
+/******************************************************************************
 
                               Online C++ Compiler.
                Code, Compile, Run and Debug C++ program online.
 Write your code in this editor and press "Run" button to compile and execute it.
 
-***************************/
+*******************************************************************************/
+
 #include <iostream>
 
 using namespace std;
 
 int main()
 {
-    int p,j,a,hasil,hasil3,hasil1,hasil2;
+    string judul, bait[20];
+    int i=0;
+    int pilihan,batas,jenis,angka,hasil,hasil3,hasil1,hasil2;
     
-    cout<<"\tARDAN CALCULATOR"<<endl;
+    cout<<"ARDAN PROGRAM";
     cout<<"----------------------------------"<<endl;
-    cout<<"1. Perkalian"<<endl;
-    cout<<"2. Pembagian"<<endl;
-    cout<<"3. Perkurangan"<<endl;
-    cout<<"4. Pertambahan"<<endl;
+    cout<<"1. Kalkulator"<<endl;
+    cout<<"2. Puisi"<<endl;
     cout<<"----------------------------------"<<endl;
-    cout<<"Masukkan angka   : ";
-    cin>>a;
-    cout<<"Pilih Jenis      : ";
-    cin>>j;
-    cout<<"Masukkan Batas   : ";
-    cin>>p;
-    cout<<"----------------------------------"<<endl;
-    cout<<"Hasil : "<<endl;
-    cout<<endl;
-    if(j == 1){
-       for (int u = 0; u<=p; u++){
+    cout<<"Masukkan Pilihan : ";
+    cin>>pilihan;
+    cin.ignore();
+    system("clear");
+    if(pilihan == 1){
+        cout<<"\tARDAN CALCULATOR"<<endl;
+        cout<<"----------------------------------"<<endl;
+        cout<<"1. Perkalian"<<endl;
+        cout<<"2. Pembagian"<<endl;
+        cout<<"3. Perkurangan"<<endl;
+        cout<<"4. Pertambahan"<<endl;
+        cout<<"----------------------------------"<<endl;
+        cout<<"Masukkan angka   : ";
+        cin>>angka;
+        cout<<"Pilih Jenis      : ";
+        cin>>jenis;
+        cout<<"Masukkan Batas   : ";
+        cin>>batas;
+        cout<<"----------------------------------"<<endl;
+        cout<<"Hasil : "<<endl;
+        cout<<endl;
+        if(jenis == 1){
+            for (int u = 0; u<=batas; u++){
 
-            hasil3 = a * u;
-            cout<<u;
-            cout<<" X ";
-            cout<<a;
-            cout<<" = ";
-            cout<<hasil3<<endl;
-
+                hasil3 = angka * u;
+                cout<<u;
+                cout<<" X ";
+                cout<<angka;
+                cout<<" = ";
+                cout<<hasil3<<endl;
+            }
+        }else if(jenis == 2){ 
+            for (int u = angka; u<=batas; u+=angka){
+                hasil = u/angka;
+                cout<<u;
+                cout<<" : ";
+                cout<<angka;
+                cout<<" = ";
+                cout<<hasil<<endl;
+            }
+        }else if(jenis == 3){ 
+            for (int u = 1; u<=batas; u++){
+                hasil1 = u-angka;
+                cout<<u;
+                cout<<" - ";
+                cout<<angka;
+                cout<<" = ";
+                cout<<hasil1<<endl;
+            }
+        }else if(jenis == 4){ 
+            for (int u = 1; u<=batas; u++){
+                hasil2 = u+angka;
+                cout<<u;
+                cout<<" + ";
+                cout<<angka;
+                cout<<" = ";
+                cout<<hasil2<<endl;
+            }
         }
-    }else if(j == 2){ 
-        for (int u = a; u<=p; u+=a){
-            hasil = u/a;
-            cout<<u;
-            cout<<" : ";
-            cout<<a;
-            cout<<" = ";
-            cout<<hasil<<endl;
+    }else if(pilihan == 2){
+        cout<<"\tARDAN POETRY"<<endl;
+        cout<<"----------------------------------"<<endl;
+        cout<<"Masukkan maksimal 20 bait puisi!"<<endl;
+        cout<<endl;
+        cout<<"Masukkan Judul : ";
+        getline(cin,judul);
+            for (i; i<20; i++) {
+            cout<<"Masukkan bait ke-"<<i+1<<" : ";
+            getline(cin,bait[i]);
+                if(bait[i] == "SELESAI"){
+                break;
+                }
         }
-    }else if(j == 3){ 
-        for (int u = 1; u<=p; u++){
-            hasil1 = u-a;
-            cout<<u;
-            cout<<" - ";
-            cout<<a;
-            cout<<" = ";
-            cout<<hasil1<<endl;
-        }
-    }else if(j == 4){ 
-        for (int u = 1; u<=p; u++){
-            hasil2 = u+a;
-            cout<<u;
-            cout<<" + ";
-            cout<<a;
-            cout<<" = ";
-            cout<<hasil2<<endl;
+        cout<<"----------------------------------"<<endl;
+        cout<<"\t"<<judul<<endl;
+            for (int b=0; b<i; b++) {
+            cout<<bait[b]<<endl;
         }
     }
-
     return 0;
 }
